@@ -19,7 +19,7 @@ Requires:       python-six
 A python package that provides useful locks.
 
 %prep
-%setup -qc
+%setup -q -n %{pypi_name}-%{upstream_version}
 
 %build
 %{__python2} setup.py build
@@ -30,10 +30,7 @@ A python package that provides useful locks.
 %files
 %doc README.rst
 
-# license is included in latest github checkout
-# %LICENSE LICENSE
 %{python2_sitelib}/%{pypi_name}
 %{python2_sitelib}/%{pypi_name}-%{version}-py%{python_version}.egg-info
 
 %changelog
-
