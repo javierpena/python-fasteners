@@ -20,8 +20,6 @@ A python package that provides useful locks.
 
 %prep
 %setup -qc
-# copy LICENSE etc. to top level dir
-cp -a README.rst ..
 
 %build
 %{__python2} setup.py build
